@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "testimonios"
+    }
+  },
+  "defaultProject": "testimonios",
+  "cli": {
+    "analytics": "af2908fd-7a43-42c7-8e09-201458b8d356"
+  }
 }
