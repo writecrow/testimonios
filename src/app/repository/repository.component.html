@@ -1,4 +1,8 @@
-<a *ngFor="let r of repository" routerLink="/testimonio/{{r.path}}">
+<h4><label for="search-box">Repository Search</label></h4>
+
+<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+<a *ngFor="let r of repository$ | async" routerLink="/testimonio/{{r.path}}">
     <h2>{{r.title}}</h2>
     <h3>{{r.author}}</h3>
     {{r.summary}}
