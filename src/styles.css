@@ -1,4 +1,4 @@
-html {
+html, body {
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -11,4 +11,5 @@ header a {
 }
 header a.title {
   text-decoration: none;
+  font-size: 2.5rem;
 }

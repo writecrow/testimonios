@@ -1,5 +1,11 @@
-<div *ngIf="item">
-  <h2>{{item.title}}</h2>
-  {{item.summary}}
+<div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <div *ngIf="item">
+        <h2>{{item.title}}</h2>
+        {{item.summary}}
+      </div>
+      <button (click)="goBack()">Go back</button>
+    </div>
+  </div>
 </div>
-<button (click)="goBack()">Go back</button>

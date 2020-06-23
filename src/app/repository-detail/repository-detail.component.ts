@@ -31,8 +31,8 @@ export class RepositoryDetailComponent implements OnInit {
       .subscribe(item => this.item = item);
   }
 
-  goBack(): void {
-    this.location.back();
-  }
+goBack(): void {
+  this.location.back();
+}
 
 }

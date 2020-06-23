@@ -1,11 +1,55 @@
-<h4><label for="search-box">Repository Search</label></h4>
-
-<input #searchBox id="search-box" (input)="search(searchBox.value)" />
-
-<a *ngFor="let r of repository$ | async" routerLink="/testimonio/{{r.path}}">
-    <h2>{{r.title}}</h2>
-    <h3>{{r.author}}</h3>
-    {{r.summary}}
-    {{r.category}}
-    {{r.tags}}
-</a>
+<div class="container">
+    <div class="row">
+        <div class="two-thirds column">
+            <form id="search-box" class="form-inline">
+                <input #searchBox id="search-input" name="keywords" [(ngModel)]="searchInput"
+                    placeholder="Search by keyword..." aria-label="Search" autofocus />
+                <label for="searchSubmit">
+                    <button name="searchSubmit" class="primary"
+                        (click)="textSearch(searchBox.value)">Search</button>
+                </label>
+                <label for="resetSubmit">
+                    <button name="resetSubmit" class="secondary" (click)="reset()">Reset</button>
+                </label>
+            </form>
+            <div *ngIf="!repository || repository.length === 0">
+                <p>No testimonios match the search criteria.</p>
+            </div>
+            <div *ngIf="repository || repository.length > 0">
+                <p>Matching results: {{repository.length}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="two-thirds column results">
+            <div class="result" *ngFor="let r of repository">
+                <a routerLink="/testimonio/{{r.path}}">
+                    <h2>{{r.title}}</h2>
+                    <h3>{{r.author}}</h3>
+                    <div class="summary">{{r.summary}}</div>
+                    <div class="metadata">
+                    <strong>Category:</strong> {{r.category}} | <strong>Topics:</strong> {{r.topics}}
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="one-third column">
+            <details open="open" class="facets">
+                <summary>Category</summary>
+                <ul class="details-wrapper">
+                    <li *ngFor="let f of categories">
+                        <input [(ngModel)]="f.checked" type="checkbox" [attr.aria-label]="f.name" (click)="facetSearch(searchBox.value, 'category', f.name)">{{ f.name }}
+                    </li>
+                </ul>
+            </details>
+            <details open="open" class="facets">
+                <summary>Topics</summary>
+                <ul class="details-wrapper">
+                    <li *ngFor="let t of topics">
+                        <input [(ngModel)]="t.checked" type="checkbox" [attr.aria-label]="t.name" (click)="facetSearch(searchBox.value, 'topics', t.name)">{{ t.name }}
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</div>

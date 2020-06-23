@@ -1,0 +1,81 @@
+.result {
+  background: hsl(0, 0%, 96%);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
+  padding: .5rem;
+  width: 100%;
+}
+.result h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.result h3 {
+  font-size: 1.75rem;
+}
+.results .result a {
+  text-decoration: none;
+  color: #000;
+}
+.summary {
+  padding-bottom: 1rem;
+}
+.metadata {
+  padding-top: 1rem;
+  border-top: 1px solid black;
+}
+
+ul.details-wrapper {
+  margin-bottom: 1.25rem;
+}
+ul.details-wrapper li {
+  font-size: 1.75rem;
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom:0px;
+}
+ul.details-wrapper li input {
+  margin-right: 10px;
+  margin-bottom: 1rem;
+}
+.facets summary {
+  font-weight: 700;
+  color: #fff;
+  background-color: #3d3d3d;
+  padding: .5rem;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+details.facets {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+#search-box {
+  font-size:1.75rem;
+  margin-top: 2rem;
+}
+#search-box input {
+  padding: 5px 5px;
+  font-size: 1.4rem;
+}
+#search-input {
+  width: 300px;
+}
+#search-box label {
+  display: inline-block;
+  padding: 10px 10px;
+}
+button.primary {
+  background-color: #ab0520;
+  color: #fff;
+}
+button.primary,
+button.secondary {
+  border: 1px solid #666;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
