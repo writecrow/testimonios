@@ -5,6 +5,7 @@ export interface Repository {
   category: string;
   topics: string;
   path: string;
+  date: string;
 }
 
 export interface Facet {

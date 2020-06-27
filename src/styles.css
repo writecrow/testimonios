@@ -1,7 +1,6 @@
 html, body {
   font-family: 'Quicksand', sans-serif;
 }
-
 header {
   background-color: #AB0520;
   color: #ffffff;
@@ -12,4 +11,139 @@ header a {
 header a.title {
   text-decoration: none;
   font-size: 2.5rem;
+}
+a {
+  color:#ab0520;
+}
+
+
+/* General styling */
+button, input[type="submit"] {
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button:not(:disabled):not(.disabled),
+input[type="submit"]:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+button:focus, input[type="submit"]:focus,
+input:focus {
+  outline: #ab0520 auto 0px;
+}
+a:focus {
+  outline: #ab0520 auto 0px;
+}
+button.primary:hover,
+button.primary:focus {
+  background-color: #850016;
+}
+button.primary {
+  background-color: #ab0520;
+  color: #fff;
+}
+button.primary,
+button.secondary {
+  border: 1px solid rgb(46, 45, 45)520;
+}
+button.secondary:hover,
+button.secondary:focus {
+  background-color: rgb(207, 204, 204);
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+/* Form elements */
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted #ab0520;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #ab0520!important;
 }

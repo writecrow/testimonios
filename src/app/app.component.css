@@ -1,0 +1,19 @@
+header {
+  padding-bottom: 1rem;
+}
+.nav {
+  border-bottom: 1px solid #ab0520;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.nav a {
+  padding-right: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav a:hover,
+.nav a:focus {
+  text-decoration: underline;
+  color: #9b021c;
+}

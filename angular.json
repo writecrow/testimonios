@@ -24,8 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/normalize.css",
-              "src/assets/skeleton.css",
               "src/styles.css"
             ],
             "scripts": []
